@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mind Essence - Sobre</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#4A5320",
+              secondary: "#8A9A5B",
+              accent: "#D3C3E5",
+              darkAccent: "#926FA5",
+              deepAccent: "#4B296B",
+            },
+            fontFamily: {
+              sans: ["Raleway", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="/pages/style.css" />
+  </head>
+
+  <body class="bg-accent font-sans text-deepAccent">
+    <!-- Navbar -->
+    <header class="bg-white shadow-md">
+      <div class="container mx-auto p-4 flex justify-between items-center">
+        <a href="/" class="flex items-center">
+          <img
+            src="/assets/mind-essence.png"
+            alt="Mind Essence Logo"
+            class="h-10 w-auto sm:h-8 md:h-10 lg:h-12 xl:h-14"
+          />
+        </a>
+        <nav class="hidden md:flex space-x-4">
+          <a href="/" class="text-accent">Início</a>
+          <a href="/loja" class="text-accent">Loja</a>
+          <a href="#" class="text-darkAccent">Sobre Nós</a>
+          <a href="/contato" class="text-accent">Contato</a>
+        </nav>
+        <button class="block md:hidden text-accent" onclick="toggleMenu()">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Seção Sobre -->
+    <section class="container mx-auto px-4 py-16">
+      <div class="text-center max-w-3xl mx-auto mb-8">
+        <h1 class="text-3xl font-bold text-deepAccent mb-4">
+          Sobre o Mind Essence
+        </h1>
+        <p class="text-lg text-secondary">
+          Mind Essence é uma plataforma dedicada ao uso seguro e educacional de
+          óleos essenciais. Criamos um espaço completo, que vai além de uma
+          simples loja. Aqui, nossos usuários aprendem, compartilham
+          experiências, e encontram produtos de alta qualidade para apoiar seu
+          bem-estar físico e emocional.
+        </p>
+      </div>
+
+      <!-- Principais Serviços e Funcionalidades -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Educação e Recursos -->
+        <div
+          class="bg-white p-6 rounded-lg shadow-md w-64 h-80 overflow-hidden"
+        >
+          <h2 class="text-xl font-semibold text-primary mb-4">
+            Educação e Recursos
+          </h2>
+          <ul class="list-disc list-inside text-secondary space-y-2">
+            <li>Recursos Premium e Gratuitos</li>
+            <li>Blog e Conteúdo Educativo</li>
+            <li>Receitas e Combinações Personalizadas</li>
+            <li>Quiz de Personalização</li>
+            <li>Cursos Online com Certificados</li>
+          </ul>
+        </div>
+
+        <!-- E-commerce -->
+        <div
+          class="bg-white p-6 rounded-lg shadow-md w-64 h-80 overflow-hidden"
+        >
+          <h2 class="text-xl font-semibold text-primary mb-4">E-commerce</h2>
+          <ul class="list-disc list-inside text-secondary space-y-2">
+            <li>Loja de Produtos de Aromaterapia</li>
+            <li>Programas de Fidelidade</li>
+            <li>Caixas Mensais com Produtos Sortidos</li>
+          </ul>
+        </div>
+
+        <!-- Área de Membros -->
+        <div
+          class="bg-white p-6 rounded-lg shadow-md w-64 h-80 overflow-hidden"
+        >
+          <h2 class="text-xl font-semibold text-primary mb-4">
+            Área de Membros
+          </h2>
+          <ul class="list-disc list-inside text-secondary space-y-2">
+            <li>Área de Membros por Perfil</li>
+            <li>Monitoramento de Bem-Estar</li>
+          </ul>
+        </div>
+
+        <!-- Ferramentas e Funcionalidades Interativas -->
+        <div
+          class="bg-white p-6 rounded-lg shadow-md w-64 h-80 overflow-hidden"
+        >
+          <h2 class="text-xl font-semibold text-primary mb-4">
+            Ferramentas Interativas
+          </h2>
+          <ul class="list-disc list-inside text-secondary space-y-2">
+            <li>Calculadora de Mistura de Óleos</li>
+            <li>Notificações Personalizadas</li>
+          </ul>
+        </div>
+
+        <!-- Comunidade e Interação -->
+        <div
+          class="bg-white p-6 rounded-lg shadow-md w-64 h-80 overflow-hidden"
+        >
+          <h2 class="text-xl font-semibold text-primary mb-4">
+            Comunidade e Interação
+          </h2>
+          <ul class="list-disc list-inside text-secondary space-y-2">
+            <li>Comunidade de Usuários</li>
+            <li>Integração com Redes Sociais</li>
+          </ul>
+        </div>
+
+        <!-- Conexão com Profissionais -->
+        <div
+          class="bg-white p-6 rounded-lg shadow-md w-64 h-80 overflow-hidden"
+        >
+          <h2 class="text-xl font-semibold text-primary mb-4">
+            Conexão com Profissionais
+          </h2>
+          <ul class="list-disc list-inside text-secondary space-y-2">
+            <li>Busca de Profissionais de Aromaterapia</li>
+            <li>Marketplace para Terapeutas</li>
+          </ul>
+        </div>
+
+        <!-- Assinaturas -->
+        <div
+          class="bg-white p-6 rounded-lg shadow-md w-64 h-80 overflow-hidden col-span-1 md:col-span-2"
+        >
+          <h2 class="text-xl font-semibold text-primary mb-4">Assinaturas</h2>
+          <p class="text-secondary">
+            Oferecemos diversos modelos de assinatura que proporcionam acesso a
+            conteúdos e serviços exclusivos, adaptados ao perfil de cada
+            usuário.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darkAccent text-white py-6">
+      <div class="container mx-auto text-center">
+        <p>&copy; 2024 Mind Essence. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden");
+      }
+    </script>
+  </body>
+</html>
