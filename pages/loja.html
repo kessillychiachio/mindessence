@@ -31,52 +31,21 @@
   </head>
 
   <body class="bg-white font-sans text-deepAccent">
-    <!-- Navbar -->
-    <header class="bg-white shadow-md">
-      <div class="container mx-auto p-0 flex justify-between items-center">
-        <a href="/" class="flex items-center">
-          <img
-          src="/assets/mind-essence.png"
-          alt="Mind Essence Logo"
-          class="h-32 w-auto md:h-28 lg:h-28 xl:h-28"
-        />
-      
-        <nav class="hidden md:flex space-x-4">
-          <a href="/pages/index.html" class="text-accent">Início</a>
-          <a href="/pages/loja.html" class="text-darkAccent">Loja</a>
-          <a href="/pages/about.html" class="text-accent">Sobre Nós</a>
-        </nav>
-        <button class="block md:hidden text-accent" onclick="toggleMenu()">
-          <svg
-            class="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16m-7 6h7"
-            ></path>
-          </svg>
-        </button>
-      </div>
-    </header>
+    <div id="header"></div>
 
-    <!-- Banner da Loja -->
     <section
-  class="relative w-full h-64 flex items-center justify-center text-center text-white bg-fixed"
-  style="background-image: url('/assets/slider3.jpg'); background-size: cover;"
->
-  <div class="absolute inset-0 bg-black opacity-40"></div>
-  <div class="relative z-10">
-    <h1 class="text-3xl font-bold">Bem-vindo à Loja Mind Essence</h1>
-    <p class="mt-2">Explore nossa linha de produtos naturais</p>
-  </div>
-</section>
-
+      class="relative w-full h-64 flex items-center justify-center text-center text-white bg-fixed"
+      style="
+        background-image: url('/assets/slider3.jpg');
+        background-size: cover;
+      "
+    >
+      <div class="absolute inset-0 bg-black opacity-40"></div>
+      <div class="relative z-10">
+        <h1 class="text-3xl font-bold">Bem-vindo à Loja Mind Essence</h1>
+        <p class="mt-2">Explore nossa linha de produtos naturais</p>
+      </div>
+    </section>
 
     <!-- Filtros e Produtos -->
     <section class="container mx-auto px-4 py-12">
@@ -150,18 +119,7 @@
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-darkAccent text-white py-6">
-      <div class="container mx-auto text-center">
-        <p>&copy; 2024 Mind Essence. Todos os direitos reservados.</p>
-      </div>
-    </footer>
-
-    <script>
-      function toggleMenu() {
-        const menu = document.getElementById("mobile-menu");
-        menu.classList.toggle("hidden");
-      }
-    </script>
+    <div id="footer"></div>
+    <script src="/js/loadHeaderFooter.js"></script>
   </body>
 </html>

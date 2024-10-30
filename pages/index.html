@@ -31,50 +31,8 @@
     <link rel="stylesheet" href="/pages/style.css" />
   </head>
 
-  <body class="bg-accent font-sans text-deepAccent">
-    <!-- Navbar -->
-    <header class="bg-white shadow-md">
-      <div class="container mx-auto p-0 flex justify-between items-center">
-        <a href="/" class="flex items-center">
-          <img
-          src="/assets/mind-essence.png"
-          alt="Mind Essence Logo"
-          class="h-32 w-auto md:h-28 lg:h-28 xl:h-28"
-        />
-      
-        <nav class="hidden md:flex space-x-4">
-          <a href="/pages/index.html" class="text-darkAccent">Início</a>
-          <a href="/pages/loja.html" class="text-accent">Loja</a>
-          <a href="/pages/about.html" class="text-accent">Sobre Nós</a>
-        </nav>
-        <!-- Menu hamburguer para mobile -->
-        <button class="block md:hidden text-accent" onclick="toggleMenu()">
-          <svg
-            class="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16m-7 6h7"
-            ></path>
-          </svg>
-        </button>
-      </div>
-
-      <!-- Mobile menu -->
-      <div id="mobile-menu" class="hidden md:hidden bg-white">
-        <nav class="flex flex-col items-center space-y-4 p-4">
-          <a href="#" class="text-deepAccent">Início</a>
-          <a href="#" class="text-deepAccent">Loja</a>
-          <a href="#" class="text-deepAccent">Sobre Nós</a>
-        </nav>
-      </div>
-    </header>
+  <body class="bg-white font-sans text-deepAccent">
+    <div id="header"></div>
 
     <section
       class="relative w-full h-screen flex items-center justify-center text-center text-white"
@@ -104,11 +62,107 @@
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-darkAccent text-white py-6">
-      <div class="container mx-auto text-center">
-        <p>&copy; 2024 Mind Essence. Todos os direitos reservados.</p>
-      </div>
-    </footer>
+    <section class="container mx-auto px-4 py-8">
+      <h2 class="text-2xl font-bold text-center mb-4">
+        O Mind Essence está em desenvolvimento!
+      </h2>
+      <p class="text-center mb-8">
+        Inscreva-se para nos ajudar a construir uma comunidade cada vez melhor.
+      </p>
+      <form
+        id="signupForm"
+        class="max-w-lg mx-auto bg-accent p-6 rounded-md shadow-md"
+      >
+        <div class="mb-4">
+          <label for="name" class="block text-gray-700 font-semibold"
+            >Nome Completo:</label
+          >
+          <input
+            type="text"
+            id="name"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md"
+            required
+          />
+          <small class="text-red-500 hidden" id="nameError"
+            >Por favor, insira seu nome completo.</small
+          >
+        </div>
+
+        <div class="mb-4">
+          <label for="birthdate" class="block text-gray-700 font-semibold"
+            >Data de Nascimento:</label
+          >
+          <input
+            type="date"
+            id="birthdate"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md"
+            required
+          />
+        </div>
+
+        <div class="mb-4">
+          <label for="email" class="block text-gray-700 font-semibold"
+            >E-mail:</label
+          >
+          <input
+            type="email"
+            id="email"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md"
+            required
+          />
+          <small class="text-red-500 hidden" id="emailError"
+            >Insira um e-mail válido.</small
+          >
+        </div>
+
+        <div class="mb-4">
+          <label for="profession" class="block text-gray-700 font-semibold"
+            >Área de Atuação:</label
+          >
+          <select
+            id="profession"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md"
+            required
+          >
+            <option value="">Selecione sua área</option>
+            <option value="Aromaterapeuta">Profissional da Aromaterapia</option>
+            <option value="Saude">Profissional da Saúde</option>
+            <option value="Programador">Desenvolvedor</option>
+            <option value="Consumidor">Consumidor de Óleos Essenciais</option>
+          </select>
+          <small class="text-red-500 hidden" id="professionError"
+            >Escolha uma área de atuação.</small
+          >
+        </div>
+
+        <div class="mb-6">
+          <label for="feedback" class="block text-gray-700 font-semibold"
+            >Como você gostaria de contribuir?</label
+          >
+          <textarea
+            id="feedback"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md"
+            rows="4"
+            required
+          ></textarea>
+          <small class="text-red-500 hidden" id="feedbackError"
+            >Por favor, descreva sua contribuição.</small
+          >
+        </div>
+
+        <button
+          type="submit"
+          class="w-full bg-primary text-white py-2 px-4 rounded-md hover:bg-secondary"
+        >
+          Enviar Inscrição
+        </button>
+      </form>
+    </section>
+
+    <script src="/js/formHandler.js"></script>
+
+    <div id="footer"></div>
+
+    <script src="/js/loadHeaderFooter.js"></script>
   </body>
 </html>
