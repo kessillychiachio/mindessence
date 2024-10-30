@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora Completa de Mistura de Óleos Essenciais</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-gray-100 font-sans text-gray-800">
+    <div class="container mx-auto py-10 px-4">
+      <h1 class="text-3xl font-bold text-center mb-8">
+        Calculadora de Mistura de Óleos Essenciais
+      </h1>
+
+      <form id="oil-blend-form" class="bg-white p-6 rounded-lg shadow-md">
+        <!-- Tipo de Base para Diluição -->
+        <div class="mb-6">
+          <label class="block text-lg font-medium mb-2"
+            >Tipo de Base para Diluição</label
+          >
+          <select id="base-type" class="w-full p-2 border rounded-lg">
+            <option value="óleo">Óleo</option>
+            <option value="creme">Creme</option>
+            <option value="loção">Loção</option>
+            <option value="óleo de massagem">Óleo para Massagem</option>
+          </select>
+        </div>
+
+        <!-- Óleo Carreador -->
+        <div class="mb-6">
+          <label class="block text-lg font-medium mb-2"
+            >Seleção de Óleo Carreador</label
+          >
+          <select id="carrier-oil" class="w-full p-2 border rounded-lg">
+            <option value="óleo de coco">Óleo de Coco</option>
+            <option value="jojoba">Óleo de Jojoba</option>
+            <option value="amêndoas">Óleo de Amêndoas</option>
+            <option value="abacate">Óleo de Abacate</option>
+          </select>
+        </div>
+
+        <!-- Concentração Desejada -->
+        <div class="mb-6">
+          <label class="block text-lg font-medium mb-2"
+            >Concentração Desejada</label
+          >
+          <select id="concentration" class="w-full p-2 border rounded-lg">
+            <option value="1%">1% - Uso facial, crianças, pele sensível</option>
+            <option value="3%">3% - Uso corporal, massagem leve</option>
+            <option value="5%">5% - Massagem</option>
+            <option value="10%">10% - Alívio pontual</option>
+          </select>
+        </div>
+
+        <!-- Volume Total da Mistura -->
+        <div class="mb-6">
+          <label class="block text-lg font-medium mb-2"
+            >Volume Total da Mistura</label
+          >
+          <input
+            type="number"
+            id="total-volume"
+            class="w-full p-2 border rounded-lg"
+            placeholder="Digite o volume desejado em ml"
+            min="1"
+          />
+        </div>
+
+        <!-- Óleos Essenciais -->
+        <div class="mb-6" id="essential-oils-section">
+          <label class="block text-lg font-medium mb-2"
+            >Escolha dos Óleos Essenciais</label
+          >
+          <div id="essential-oils-container">
+            <div class="essential-oil-entry flex items-center space-x-2 mb-2">
+              <select class="essential-oil w-full p-2 border rounded-lg">
+                <option value="lavanda">Lavanda - Relaxamento</option>
+                <option value="tea tree">Tea Tree - Antibacteriano</option>
+                <option value="hortelã">Hortelã - Refrescante</option>
+                <option value="alecrim">Alecrim - Estimulante</option>
+              </select>
+            
+          </div>
+          <button
+            type="button"
+            onclick="addEssentialOil()"
+            class="text-accent font-bold mt-2"
+          >
+            + Adicionar Óleo Essencial
+          </button>
+        </div>
+
+        <!-- Tipo de Uso e Destinatário -->
+        <div class="mb-6">
+          <label class="block text-lg font-medium mb-2"
+            >Tipo de Uso e Destinatário</label
+          >
+          <select id="usage" class="w-full p-2 border rounded-lg">
+            <option value="relaxamento">Relaxamento</option>
+            <option value="revitalização">Revitalização</option>
+            <option value="alívio de dor">Alívio de Dor</option>
+            <option value="tratamento de pele">Tratamento de Pele</option>
+          </select>
+          <select id="user" class="w-full mt-2 p-2 border rounded-lg">
+            <option value="adulto">Adulto</option>
+            <option value="criança">Criança</option>
+            <option value="pele sensível">Pele Sensível</option>
+            <option value="idoso">Idoso</option>
+          </select>
+        </div>
+
+        <!-- Botão de Cálculo -->
+        <button
+          type="button"
+          onclick="calculateBlend()"
+          class="bg-blue-500 text-white py-2 px-4 rounded-full w-full hover:bg-blue-700"
+        >
+          Calcular Mistura
+        </button>
+      </form>
+
+      <div id="result" class="text-center mt-8 text-darkAccent text-lg"></div>
+    </div>
+
+    <!-- Arquivo JavaScript Externo -->
+    <script src="/js/calculadora.js"></script>
+  </body>
+</html>
