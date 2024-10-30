@@ -1,0 +1,44 @@
+<header class="bg-white shadow-md">
+  <div class="container mx-auto p-4 flex justify-between items-center">
+    <a href="/" class="flex items-center">
+      <img
+        src="/assets/mind-essence.png"
+        alt="Mind Essence Logo"
+        class="h-32 w-auto"
+      />
+    </a>
+    <nav class="hidden md:flex space-x-4">
+      <a href="/pages/index.html" class="text-darkAccent">Início</a>
+      <a href="/pages/loja.html" class="text-accent">Loja</a>
+      <a href="/pages/about.html" class="text-accent">Sobre Nós</a>
+      <div class="relative group">
+        <a href="#" class="text-accent">Educação</a>
+        <div
+          class="absolute hidden group-hover:flex flex-col bg-white shadow-lg mt-2 rounded-md"
+        >
+          <a
+            href="/pages/calculadora.html"
+            class="text-deepAccent px-4 py-2 hover:bg-accent"
+            >Calculadora de Óleos</a
+          >
+        </div>
+      </div>
+    </nav>
+    <button class="block md:hidden text-accent" onclick="toggleMenu()">
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16m-7 6h7"
+        ></path>
+      </svg>
+    </button>
+  </div>
+</header>
