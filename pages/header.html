@@ -7,10 +7,11 @@
         class="h-20 w-auto"
       />
     </a>
-    <nav class="hidden md:flex space-x-4">
+
+    <nav class="hidden md:flex space-x-4 z-20">
       <a href="/pages/index.html" class="nav-link text-accent">Início</a>
       <a href="/pages/loja.html" class="nav-link text-accent">Loja</a>
-      <a href="/pages/about.html" class="nav-link text-accent">Sobre Nós</a>
+
       <div class="relative group">
         <a href="/pages/education.html" class="nav-link text-accent"
           >Educação</a
@@ -25,8 +26,10 @@
           >
         </div>
       </div>
+      <a href="/pages/about.html" class="nav-link text-accent">Sobre Nós</a>
     </nav>
-    <button class="block md:hidden text-accent" onclick="toggleMenu()">
+
+    <button id="menu-toggle-button" class="block md:hidden text-accent">
       <svg
         class="w-6 h-6"
         fill="none"
@@ -42,5 +45,24 @@
         ></path>
       </svg>
     </button>
+  </div>
+
+  <div
+    id="mobile-menu"
+    class="hidden flex-col md:hidden bg-white shadow-lg w-1/2 h-screen absolute right-0 top-20 opacity-90 z-20"
+  >
+    <a href="/pages/index.html" class="nav-link text-accent px-4 py-2"
+      >Início</a
+    >
+    <a href="/pages/loja.html" class="nav-link text-accent px-4 py-2">Loja</a>
+    <a href="/pages/about.html" class="nav-link text-accent px-4 py-2"
+      >Sobre Nós</a
+    >
+    <a href="/pages/education.html" class="nav-link text-accent px-4 py-2"
+      >Educação</a
+    >
+    <a href="/pages/calculadora.html" class="nav-link text-deepAccent px-4 py-2"
+      >Calculadora de Óleos</a
+    >
   </div>
 </header>

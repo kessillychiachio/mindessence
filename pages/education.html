@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mind Essence - Home</title>
+    <title>Mind Essence - Educação sobre Óleos Essenciais</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap"
       rel="stylesheet"
@@ -14,11 +14,11 @@
         theme: {
           extend: {
             colors: {
-              primary: "#4A5320", // Verde Oliva Escuro
-              secondary: "#8A9A5B", // Verde Oliva Médio
-              accent: "#D3C3E5", // Roxo Pastel
-              darkAccent: "#926FA5", // Roxo Médio
-              deepAccent: "#4B296B", // Roxo Escuro
+              primary: "#4A5320",
+              secondary: "#8A9A5B",
+              accent: "#D3C3E5",
+              darkAccent: "#926FA5",
+              deepAccent: "#4B296B",
             },
             fontFamily: {
               sans: ["Raleway", "sans-serif"],
@@ -27,14 +27,131 @@
         },
       };
     </script>
-
     <link rel="stylesheet" href="/pages/style.css" />
   </head>
 
+  <body class="font-sans bg-primary text-gray-800">
+    <!-- Header -->
     <div id="header"></div>
 
+    <!-- Main Content -->
+    <main class="container mx-auto p-6">
+      <!-- Section: Introduction to Essential Oils -->
+      <section class="my-8 animate-fadeIn">
+        <h1 class="text-4xl font-extrabold text-white mb-4 text-center">
+          Educação sobre Óleos Essenciais
+        </h1>
+        <p
+          class="text-lg text-white leading-relaxed text-center max-w-3xl mx-auto"
+        >
+          Os óleos essenciais são compostos naturais extraídos de plantas que
+          capturam seu aroma e benefícios únicos. Usados há séculos, eles
+          oferecem uma forma de melhorar o bem-estar físico e emocional.
+        </p>
+      </section>
+
+      <section
+        class="my-8 from-primary via-secondary to-primary rounded-lg p-6 animate-slideInLeft"
+      >
+        <h2 class="text-3xl font-semibold text-white mb-4 text-center">
+          Benefícios dos Óleos Essenciais
+        </h2>
+        <ul class="list-disc list-inside text-lg text-white mx-auto max-w-lg">
+          <li>Relaxamento e redução do estresse</li>
+          <li>Melhora da qualidade do sono</li>
+          <li>Aumento da concentração e clareza mental</li>
+          <li>Suporte ao sistema imunológico</li>
+        </ul>
+      </section>
+
+      <!-- Section: Precautions -->
+      <section class="my-8 animate-slideInRight">
+        <h2 class="text-3xl font-semibold text-darkAccent mb-4 text-center">
+          Precauções ao Usar Óleos Essenciais
+        </h2>
+        <p
+          class="text-lg text-secondary text-center max-w-3xl mx-auto leading-relaxed"
+        >
+          Os óleos essenciais são poderosos e devem ser usados com cuidado.
+          Evite aplicá-los diretamente na pele sem diluição e consulte um
+          especialista antes de usar qualquer óleo essencial em crianças ou
+          animais de estimação.
+        </p>
+      </section>
+
+      <!-- Section: Interactive Cards for Popular Essential Oils -->
+      <section class="my-8 animate-fadeIn">
+        <h2 class="text-3xl font-semibold text-darkAccent mb-4 text-center">
+          Óleos Essenciais Populares
+        </h2>
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Card 1: Lavender -->
+          <div
+            class="bg-white p-4 shadow-lg rounded-lg text-center transform transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+          >
+            <h3 class="text-xl font-bold text-primary mb-2">Lavanda</h3>
+            <p class="text-secondary">
+              Conhecido por suas propriedades calmantes, o óleo de lavanda ajuda
+              a relaxar e melhorar a qualidade do sono.
+            </p>
+          </div>
+          <!-- Card 2: Peppermint -->
+          <div
+            class="bg-white p-4 shadow-lg rounded-lg text-center transform transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+          >
+            <h3 class="text-xl font-bold text-primary mb-2">Hortelã-Pimenta</h3>
+            <p class="text-secondary">
+              Energizante e refrescante, o óleo de hortelã-pimenta auxilia na
+              concentração e no alívio de dores de cabeça.
+            </p>
+          </div>
+          <!-- Card 3: Eucalyptus -->
+          <div
+            class="bg-white p-4 shadow-lg rounded-lg text-center transform transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+          >
+            <h3 class="text-xl font-bold text-primary mb-2">Eucalipto</h3>
+            <p class="text-secondary">
+              Excelente para o sistema respiratório, o óleo de eucalipto pode
+              ajudar a aliviar congestão nasal e melhorar a respiração.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Scroll to Top Button -->
+    <button
+      id="scrollToTopBtn"
+      onclick="scrollToTop()"
+      class="fixed bottom-4 right-4 bg-darkAccent text-white p-3 rounded-full shadow-lg hover:bg-deepAccent transition-opacity duration-300 opacity-0"
+    >
+      ↑
+    </button>
+
+    <!-- Footer -->
     <div id="footer"></div>
 
+    <!-- Scripts -->
     <script src="/js/loadHeaderFooter.js"></script>
+    <script>
+      // Toggle Mobile Menu
+      function toggleMenu() {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden");
+      }
+
+      // Scroll to Top Button
+      const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+      window.onscroll = function () {
+        if (window.scrollY > 300) {
+          scrollToTopBtn.classList.remove("opacity-0");
+        } else {
+          scrollToTopBtn.classList.add("opacity-0");
+        }
+      };
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    </script>
   </body>
 </html>

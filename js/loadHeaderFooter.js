@@ -8,7 +8,6 @@ function loadHTML(id, filePath) {
       document.getElementById(id).innerHTML = data;
       console.log(`${id} carregado com sucesso`);
 
-      // Adicionar classe ativa ao link da página atual após carregar o conteúdo
       if (id === "header") {
         const currentPath = window.location.pathname;
         console.log("Caminho atual:", currentPath);
@@ -20,6 +19,17 @@ function loadHTML(id, filePath) {
             console.log("Classe ativa adicionada ao link:", link);
           }
         });
+
+        const toggleButton = document.getElementById("menu-toggle-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        if (toggleButton) {
+          toggleButton.addEventListener("click", function () {
+            mobileMenu.classList.toggle("hidden");
+            mobileMenu.classList.toggle("flex");
+          });
+          console.log("Funcionalidade de menu sanduíche configurada");
+        }
       }
     })
     .catch(error => console.error("Erro ao carregar o arquivo HTML:", error));
