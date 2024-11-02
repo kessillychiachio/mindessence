@@ -1,56 +1,33 @@
-document.getElementById("signupForm").addEventListener("submit", function (event) {
-  event.preventDefault();
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("signupForm");
 
-  const name = document.getElementById("name").value;
-  const birthdate = document.getElementById("birthdate").value;
-  const email = document.getElementById("email").value;
-  const profession = document.getElementById("profession").value;
-  const feedback = document.getElementById("feedback").value;
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-
-  let valid = true;
-
-  if (!name.trim()) {
-    document.getElementById("nameError").classList.remove("hidden");
-    valid = false;
-  } else {
-    document.getElementById("nameError").classList.add("hidden");
-  }
-
-  if (!email.includes("@")) {  // Validação específica do e-mail
-    document.getElementById("emailError").classList.remove("hidden");
-    valid = false;
-  } else {
-    document.getElementById("emailError").classList.add("hidden");
-  }
-
-  if (!profession) {
-    document.getElementById("professionError").classList.remove("hidden");
-    valid = false;
-  } else {
-    document.getElementById("professionError").classList.add("hidden");
-  }
-
-  if (!feedback.trim()) {
-    document.getElementById("feedbackError").classList.remove("hidden");
-    valid = false;
-  } else {
-    document.getElementById("feedbackError").classList.add("hidden");
-  }
-
-  if (valid) {
-   
     const formData = {
-      name,
-      birthdate,
-      email,
-      profession,
-      feedback,
+      name: document.getElementById("name").value.trim(),
+      birthdate: document.getElementById("birthdate").value,
+      email: document.getElementById("email").value.trim(),
+      profession: document.getElementById("profession").value,
+      feedback: document.getElementById("feedback").value.trim(),
     };
-    localStorage.setItem("mindEssenceSignup", JSON.stringify(formData));
-    alert("Inscrição realizada com sucesso!");
 
-    
-    document.getElementById("signupForm").reset();
+    localStorage.setItem("signupData", JSON.stringify(formData));
+
+    displaySuccessMessage("Inscrição salva com sucesso! Obrigado por participar.");
+
+    form.reset();
+  });
+
+  function displaySuccessMessage(message) {
+    const successMessage = document.createElement("p");
+    successMessage.textContent = message;
+    successMessage.classList.add("text-green-500", "text-center", "mt-4");
+
+    form.appendChild(successMessage);
+
+    setTimeout(() => {
+      successMessage.remove();
+    }, 5000);
   }
 });

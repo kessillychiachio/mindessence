@@ -2,43 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Carrossel de fundo */
-.carousel-bg {
-  background-size: cover;
-  background-position: center;
-  height: 500px; /* Ajuste a altura da seção conforme necessário */
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 0;
-  animation: carousel 25s infinite; /* Define a animação para o carrossel */
-}
-
-/* Animação do Carrossel */
-@keyframes carousel {
-  0% {
-    background-image: url('assets/slider1.jpg');
-  }
-  20% {
-    background-image: url('assets/slider2.jpg');
-  }
-  40% {
-    background-image: url('assets/slider3.jpg');
-  }
-  60% {
-    background-image: url('assets/slider4.jpg');
-  }
-  80% {
-    background-image: url('assets/slider5.jpg');
-  }
-  100% {
-    background-image: url('assets/slider1.jpg');
-  }
-}
-
-/* Estilos adicionais para garantir que o conteúdo seja legível */
-.carousel-bg .text-white {
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+.hidden {
+  display: none;
 }

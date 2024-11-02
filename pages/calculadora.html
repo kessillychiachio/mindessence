@@ -14,11 +14,11 @@
         theme: {
           extend: {
             colors: {
-              primary: "#4A5320", // Verde Oliva Escuro
-              secondary: "#8A9A5B", // Verde Oliva Médio
-              accent: "#D3C3E5", // Roxo Pastel
-              darkAccent: "#926FA5", // Roxo Médio
-              deepAccent: "#4B296B", // Roxo Escuro
+              primary: "#4A5320",
+              secondary: "#8A9A5B",
+              accent: "#D3C3E5",
+              darkAccent: "#926FA5",
+              deepAccent: "#4B296B",
             },
             fontFamily: {
               sans: ["Raleway", "sans-serif"],
@@ -38,7 +38,6 @@
         Calculadora de Blends de Óleos Essenciais
       </h1>
 
-      <!-- Óleo Carreador -->
       <div class="mb-6">
         <label class="block text-lg font-medium mb-2"
           >Tipo de Uso e Destinatário</label
@@ -69,7 +68,6 @@
         </select>
       </div>
 
-      <!-- Concentração Desejada -->
       <div class="mb-6">
         <label class="block text-lg font-medium mb-2"
           >Concentração Desejada</label
@@ -82,7 +80,6 @@
         </select>
       </div>
 
-      <!-- Volume Total da Mistura -->
       <div class="mb-6">
         <label class="block text-lg font-medium mb-2"
           >Volume Total da Mistura</label
@@ -96,7 +93,6 @@
         />
       </div>
 
-      <!-- Óleos Essenciais -->
       <div class="mb-6" id="essential-oils-section">
         <label class="block text-lg font-medium mb-2"
           >Escolha dos Óleos Essenciais</label
@@ -108,7 +104,26 @@
               <option value="tea tree">Tea Tree - Antibacteriano</option>
               <option value="hortelã">Hortelã - Refrescante</option>
               <option value="alecrim">Alecrim - Estimulante</option>
+              <option value="eucalipto">Eucalipto - Descongestionante</option>
+              <option value="gerânio">Gerânio - Equilíbrio Emocional</option>
+              <option value="limão">Limão - Energizante</option>
+              <option value="laranja">Laranja - Calmante</option>
+              <option value="sândalo">Sândalo - Meditativo</option>
+              <option value="rosa">Rosa - Regenerador de Pele</option>
+              <option value="ylang-ylang">Ylang-Ylang - Afrodisíaco</option>
+              <option value="patchouli">Patchouli - Relaxante</option>
+              <option value="camomila">Camomila - Calmante</option>
+              <option value="cravo">Cravo - Fortalecedor Imunológico</option>
+              <option value="gengibre">Gengibre - Estimulante</option>
+              <option value="cipreste">Cipreste - Tônico Circulatório</option>
             </select>
+            <button
+              type="button"
+              class="remove-oil text-red-500 font-bold"
+              onclick="removeEssentialOil(this)"
+            >
+              X
+            </button>
           </div>
           <button
             type="button"
@@ -120,23 +135,23 @@
         </div>
       </div>
 
+      <div id="result" class="text-center mt-8 text-darkAccent text-lg"></div>
 
-      <div id="result" class="text-center mt-8 text-darkAccent text-lg">
-        <div class="flex justify-center my-4">
-          <button
-            type="button"
-            onclick="calculateBlend()"
-            class="bg-secondary text-white py-2 px-4 rounded-full hover:bg-accent"
-          >
-            Calcular Mistura
-          </button>
-        </div>
+      <div class="flex justify-center my-4">
+        <button
+          type="button"
+          onclick="calculateBlend()"
+          id="calculate-btn"
+          class="bg-secondary text-white py-2 px-4 rounded-full hover:bg-accent"
+        >
+          Calcular Mistura
+        </button>
       </div>
+    </div>
 
-      
     <script src="/js/calculadora.js"></script>
     <script src="/js/loadHeaderFooter.js"></script>
+
     <div id="footer"></div>
   </body>
-  
 </html>
